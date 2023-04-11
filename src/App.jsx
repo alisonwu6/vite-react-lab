@@ -1,10 +1,10 @@
-import Button from "@mui/material/Button";
+import Navbar from "./components/Navbar/Navbar"
 
 function App() {
   return (
     <div className="App">
       <div>
-        <Button variant="contained">Hello World</Button>
+        <Navbar />
       </div>
     </div>
   );
