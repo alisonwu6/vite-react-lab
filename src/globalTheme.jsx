@@ -2,42 +2,49 @@ import { createTheme } from '@mui/material/styles';
 
 export const globalTheme = createTheme({
   components: {
-    // name of the component
     MuiButton: {
       styleOverrides: {
-        // name of the slot
         root: {
-          fontSize: '14px',
+          fontSize: '0.875rem',
+          fontWeight: 600,
+          borderRadius: 8.5,
+          textTransform: 'none',
+          '&.MuiButton-contained': {
+            backgroundColor: '#009be5',
+            '&:hover': {
+              backgroundColor: '#006db3',
+            },
+          },
+          '&.MuiButton-outlined': {
+            color: '#fff',
+            borderColor: 'rgba(255, 255, 255, 0.7)',
+            '&:hover': {
+              backgroundColor: 'rgba(0, 0, 0, 0.04)',
+            },
+          },
+        },
+      },
+    },
+    MuiSvgIcon: {
+      styleOverrides: {
+        root: {
+          fontSize: '1.7rem',
         },
       },
     },
   },
-  typography: {
-    fontFamily: [
-      '-apple-system',
-      'BlinkMacSystemFont',
-      '"Segoe UI"',
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
-    ].join(','),
-  },
   palette: {
-    primary: {
-      light: '#757ce8',
-      main: '#3f50b5',
-      dark: '#002884',
-      contrastText: '#fff',
+    white: {
+      main: '#fff',
     },
-    secondary: {
-      light: '#ff7961',
-      main: '#f44336',
-      dark: '#ba000d',
-      contrastText: '#000',
+  },
+  typography: {
+    h1: {
+      fontSize: '1.6rem',
+      fontWeight: 600,
+      color: '#fff',
+      letterSpacing: '0.5px',
+      textTransform: 'capitalize',
     },
   },
 });
